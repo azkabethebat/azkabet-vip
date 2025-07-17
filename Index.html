@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html -->
+<html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZKABET - Platform Digital Futuristik</title>
+    <link href="./Index_files/remixicon.min.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'AlimamaShuHeiTi';
+            src: url('https://assets-persist.lovart.ai/agent-static-assets/AlimamaShuHeiTi-Bold.otf') format('opentype');
+            font-weight: bold;
+        }
+        
+        @font-face {
+            font-family: 'MiSans';
+            src: url('https://assets-persist.lovart.ai/agent-static-assets/MiSans-Bold.ttf') format('truetype');
+            font-weight: bold;
+        }
+        
+        @font-face {
+            font-family: 'MiSans';
+            src: url('https://assets-persist.lovart.ai/agent-static-assets/MiSans-Medium.ttf') format('truetype');
+            font-weight: 500;
+        }
+        
+        @font-face {
+            font-family: 'MiSans';
+            src: url('https://assets-persist.lovart.ai/agent-static-assets/MiSans-Regular.ttf') format('truetype');
+            font-weight: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'MiSans', sans-serif;
+            background-color: #0a0a14;
+            color: #ffffff;
+            overflow-x: hidden;
+            width: 1920px;
+        }
+
+        /* Animations */
+        @keyframes glow {
+            0% { filter: drop-shadow(0 0 5px rgba(183, 0, 255, 0.7)); }
+            50% { filter: drop-shadow(0 0 15px rgba(183, 0, 255, 0.9)); }
+            100% { filter: drop-shadow(0 0 5px rgba(183, 0, 255, 0.7)); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+
+        @keyframes neonFlicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff;
+            }
+            20%, 24%, 55% {
+                text-shadow: none;
+            }
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(to bottom, rgba(10, 10, 20, 0.9), rgba(10, 10, 20, 0.7));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: fixed;
+            width: 1920px;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(183, 0, 255, 0.3);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 100px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            animation: glow 2s infinite;
+        }
+
+        .logo-text {
+            font-family: 'AlimamaShuHeiTi', sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            background: linear-gradient(to right, #ff00ff, #00ffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-left: 10px;
+            position: relative;
+        }
+
+        .logo-text::after {
+            content: "⚡";
+            position: absolute;
+            right: -30px;
+            top: 0;
+            color: #ffff00;
+            animation: pulse 1.5s infinite;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav ul li a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #b700ff, #00ffff);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.3s ease;
+            border-radius: 20px;
+        }
+
+        nav ul li a:hover::before {
+            opacity: 0.2;
+        }
+
+        nav ul li a:hover {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .login-btn, .register-btn {
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .login-btn {
+            background: transparent;
+            color: #00ffff;
+            border: 2px solid #00ffff;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+        }
+
+        .login-btn:hover {
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            transform: translateY(-3px);
+        }
+
+        .register-btn {
+            background: linear-gradient(45deg, #b700ff, #00ffff);
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(183, 0, 255, 0.5);
+        }
+
+        .register-btn:hover {
+            box-shadow: 0 0 25px rgba(183, 0, 255, 0.7);
+            transform: translateY(-3px);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://assets-temp.lovart.ai/img/fb00bac6190c4c85acd25fd11077cab5/92baa8ec325a4d0723251dc4ee6aba37dbc493cc9fce6fac6d743ea18530a99b.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 1;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        .hero-title {
+            font-family: 'AlimamaShuHeiTi', sans-serif;
+            font-size: 72px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #ff00ff, #00ffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 20px rgba(183, 0, 255, 0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            margin-bottom: 40px;
+            color: #cccccc;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            padding: 18px 40px;
+            font-size: 20px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #b700ff, #00ffff);
+            color: #ffffff;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(183, 0, 255, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(183, 0, 255, 0.7);
+        }
+
+        /* Products Section */
+        .products {
+            padding: 100px 0;
+            background: linear-gradient(to bottom, #0a0a14, #12121f);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-family: 'AlimamaShuHeiTi', sans-serif;
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #ffffff;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, #b700ff, #00ffff);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: #aaaaaa;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .product-card {
+            background: rgba(20, 20, 35, 0.7);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(183, 0, 255, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(183, 0, 255, 0.1), rgba(0, 255, 255, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 15px 30px rgba(183, 0, 255, 0.3);
+        }
+
+        .product-card:hover::before {
+            opacity: 1;
+        }
+
+        .product-image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(183, 0, 255, 0.2);
+        }
+
+        .product-content {
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .product-description {
+            font-size: 16px;
+            color: #aaaaaa;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .product-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00ffff;
+            margin-bottom: 15px;
+        }
+
+        .product-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #b700ff, #00ffff);
+            color: #ffffff;
+            border: none;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .product-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(183, 0, 255, 0.5);
+        }
+
+        .view-all {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .view-all-btn {
+            padding: 12px 30px;
+            background: transparent;
+            color: #00ffff;
+            border: 2px solid #00ffff;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+        }
+
+        .view-all-btn:hover {
+            background: rgba(0, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+
+        /* Reviews Section */
+        .reviews {
+            padding: 100px 0;
+            background: linear-gradient(to bottom, #12121f, #0a0a14);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reviews::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://assets-temp.lovart.ai/img/fb00bac6190c4c85acd25fd11077cab5/22322ef714cdb9db1ef5706beaf25ec35a71dd66c8ecfae9c78f236ad724fe2a.jpg');
+            background-size: cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .reviews-container {
+            position: relative;
+            z-index: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .review-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(183, 0, 255, 0.3);
+            border-color: rgba(183, 0, 255, 0.3);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .reviewer-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #b700ff;
+            box-shadow: 0 0 10px rgba(183, 0, 255, 0.5);
+        }
+
+        .reviewer-info {
+            margin-left: 15px;
+        }
+
+        .reviewer-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .review-date {
+            font-size: 14px;
+            color: #aaaaaa;
+        }
+
+        .review-rating {
+            display: flex;
+            margin-bottom: 15px;
+            color: #ffff00;
+        }
+
+        .review-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #cccccc;
+        }
+
+        /* Promo Section */
+        .promo {
+            padding: 100px 0;
+            background: linear-gradient(to bottom, #0a0a14, #12121f);
+            position: relative;
+        }
+
+        .promo-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .promo-banner {
+            background: linear-gradient(135deg, rgba(183, 0, 255, 0.2), rgba(0, 255, 255, 0.2));
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 50px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(183, 0, 255, 0.3);
+        }
+
+        .promo-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://assets-temp.lovart.ai/img/fb00bac6190c4c85acd25fd11077cab5/073e6ecc78d30bd5bb4b7efbab3a60286bfa45b26d6f5bbbed0d961d1470fbe1.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        .promo-content {
+            flex: 1;
+            z-index: 1;
+        }
+
+        .promo-title {
+            font-family: 'AlimamaShuHeiTi', sans-serif;
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-shadow: 0 0 15px rgba(183, 0, 255, 0.7);
+        }
+
+        .promo-description {
+            font-size: 18px;
+            color: #cccccc;
+            margin-bottom: 30px;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .promo-button {
+            padding: 15px 35px;
+            background: linear-gradient(45deg, #b700ff, #00ffff);
+            color: #ffffff;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(183, 0, 255, 0.5);
+        }
+
+        .promo-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(183, 0, 255, 0.7);
+        }
+
+        .promo-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .promo-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transform: perspective(1000px) rotateY(-15deg);
+            transition: all 0.3s ease;
+        }
+
+        .promo-image img:hover {
+            transform: perspective(1000px) rotateY(-5deg) translateZ(20px);
+        }
+
+        /* Footer */
+        footer {
+            background: #0a0a14;
+            padding: 70px 0 30px;
+            border-top: 1px solid rgba(183, 0, 255, 0.3);
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        .footer-logo {
+            grid-column: span 4;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo img {
+            height: 60px;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo-text {
+            font-family: 'AlimamaShuHeiTi', sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            background: linear-gradient(to right, #ff00ff, #00ffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+            position: relative;
+        }
+
+        .footer-logo-text::after {
+            content: "⚡";
+            position: absolute;
+            right: -30px;
+            top: 0;
+            color: #ffff00;
+        }
+
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #ffffff;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(to right, #b700ff, #00ffff);
+            border-radius: 1.5px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: #aaaaaa;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-column ul li a:hover {
+            color: #00ffff;
+            transform: translateX(5px);
+        }
+
+        .footer-column ul li a i {
+            margin-right: 10px;
+            font-size: 16px;
+            color: #b700ff;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            color: #ffffff;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            background: linear-gradient(45deg, #b700ff, #00ffff);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(183, 0, 255, 0.3);
+        }
+
+        .footer-bottom {
+            grid-column: span 4;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: #777777;
+            font-size: 14px;
+        }
+
+        /* Mobile Styles */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .mobile-menu-toggle span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(10, 10, 20, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 100px 20px 20px;
+            transform: translateX(-100%);
+            transition: transform 0.4s ease;
+        }
+
+        .mobile-nav.active {
+            transform: translateX(0);
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+        }
+
+        .mobile-nav ul li {
+            margin-bottom: 20px;
+        }
+
+        .mobile-nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 500;
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-auth-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .floating-cta {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #b700ff, #00ffff);
+            color: #ffffff;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(183, 0, 255, 0.5);
+            z-index: 999;
+            animation: float 3s infinite;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            body {
+                width: 100%;
+            }
+            
+            header {
+                width: 100%;
+            }
+            
+            .header-container {
+                padding: 0 40px;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-logo {
+                grid-column: span 2;
+            }
+            
+            .footer-bottom {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 20px;
+            }
+            
+            nav, .auth-buttons {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
+            .mobile-nav {
+                display: block;
+            }
+            
+            .hero-title {
+                font-size: 48px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .promo-banner {
+                flex-direction: column;
+                padding: 30px;
+            }
+            
+            .promo-content {
+                margin-bottom: 30px;
+            }
+            
+            .promo-title {
+                font-size: 36px;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-logo {
+                grid-column: span 1;
+            }
+            
+            .footer-bottom {
+                grid-column: span 1;
+            }
+            
+            .floating-cta {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-text">AZKABET</div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#">Beranda</a></li>
+                    <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#">Produk</a></li>
+                    <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#">Tentang Kami</a></li>
+                    <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#">Kontak</a></li>
+                </ul>
+            </nav>
+            
+            <div class="auth-buttons">
+                <button class="login-btn">Masuk</button>
+                <button class="register-btn">Daftar Sekarang</button>
+            </div>
+            
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <ul>
+            <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#">Beranda</a></li>
+            <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#">Produk</a></li>
+            <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#">Tentang Kami</a></li>
+            <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#">Kontak</a></li>
+        </ul>
+        
+        <div class="mobile-auth-buttons">
+            <button class="login-btn">Masuk</button>
+            <button class="register-btn">Daftar Sekarang</button>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Platform Digital Masa Depan</h1>
+            <p class="hero-subtitle">Nikmati pengalaman digital terbaik dengan teknologi canggih dan desain futuristik yang membawa Anda ke dimensi baru dunia digital.</p>
+            <button class="hero-cta">Daftar Sekarang</button>
+        </div>
+    </section>
+    
+    <!-- Products Section -->
+    <section class="products">
+        <div class="section-header">
+            <h2 class="section-title">Produk Terbaru</h2>
+            <p class="section-subtitle">Jelajahi koleksi produk digital terbaru kami dengan teknologi mutakhir dan desain futuristik</p>
+        </div>
+        
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="./Index_files/04861170728a2a21c9a9c7bb32b94f5812a98acbada38fb4e18609d0251b0686.jpg" alt="AZKABET Mobile App" class="product-image">
+                <div class="product-content">
+                    <h3 class="product-title">AZKABET Mobile</h3>
+                    <p class="product-description">Aplikasi mobile dengan antarmuka futuristik dan fitur canggih untuk pengalaman digital terbaik.</p>
+                    <p class="product-price">Rp 0</p>
+                    <button class="product-button">Unduh Sekarang</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="./Index_files/a68ed812a6c9de7035e03f7e76d4b87ccabe0f808009cfd9633d8cc9dd5243de.jpg" alt="AZKABET Premium" class="product-image">
+                <div class="product-content">
+                    <h3 class="product-title">AZKABET Premium</h3>
+                    <p class="product-description">Paket premium dengan akses eksklusif ke semua fitur dan konten spesial untuk pengguna VIP.</p>
+                    <p class="product-price">Rp 299.000</p>
+                    <button class="product-button">Beli Sekarang</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="./Index_files/7889a2b4beb2dc5baea8719cf59c2f95d39703b702beb72b503c17533f73f853.jpg" alt="AZKABET QRIS" class="product-image">
+                <div class="product-content">
+                    <h3 class="product-title">AZKABET QRIS</h3>
+                    <p class="product-description">Sistem pembayaran digital dengan teknologi QRIS untuk transaksi cepat, aman, dan tanpa batas.</p>
+                    <p class="product-price">Rp 99.000</p>
+                    <button class="product-button">Aktifkan</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="./Index_files/a2fc997c13eebe76b8d6507c4c8a6acedcce1f970313f883b9c4e6e7cbee0ec8.jpg" alt="AZKABET Games" class="product-image">
+                <div class="product-content">
+                    <h3 class="product-title">AZKABET Games</h3>
+                    <p class="product-description">Koleksi game digital dengan grafis memukau dan gameplay inovatif untuk hiburan tanpa batas.</p>
+                    <p class="product-price">Rp 149.000</p>
+                    <button class="product-button">Main Sekarang</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="./Index_files/92baa8ec325a4d0723251dc4ee6aba37dbc493cc9fce6fac6d743ea18530a99b.jpg" alt="AZKABET VR" class="product-image">
+                <div class="product-content">
+                    <h3 class="product-title">AZKABET VR</h3>
+                    <p class="product-description">Pengalaman virtual reality yang menakjubkan dengan dunia digital yang imersif dan interaktif.</p>
+                    <p class="product-price">Rp 499.000</p>
+                    <button class="product-button">Jelajahi</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="./Index_files/22322ef714cdb9db1ef5706beaf25ec35a71dd66c8ecfae9c78f236ad724fe2a.jpg" alt="AZKABET AI" class="product-image">
+                <div class="product-content">
+                    <h3 class="product-title">AZKABET AI</h3>
+                    <p class="product-description">Asisten kecerdasan buatan yang revolusioner untuk membantu aktivitas digital Anda sehari-hari.</p>
+                    <p class="product-price">Rp 199.000</p>
+                    <button class="product-button">Coba Gratis</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="view-all">
+            <button class="view-all-btn">Lihat Semua</button>
+        </div>
+    </section>
+    
+    <!-- Reviews Section -->
+    <section class="reviews">
+        <div class="reviews-container">
+            <div class="section-header">
+                <h2 class="section-title">Ulasan Pengguna</h2>
+                <p class="section-subtitle">Lihat apa yang dikatakan pengguna tentang pengalaman mereka dengan produk AZKABET</p>
+            </div>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="./Index_files/073e6ecc78d30bd5bb4b7efbab3a60286bfa45b26d6f5bbbed0d961d1470fbe1.jpg" alt="Reviewer" class="reviewer-avatar">
+                        <div class="reviewer-info">
+                            <h4 class="reviewer-name">Andi Pratama</h4>
+                            <p class="review-date">12 Juni 2023</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="review-text">Aplikasi AZKABET benar-benar mengubah cara saya berinteraksi dengan dunia digital. Desainnya futuristik dan fitur-fiturnya sangat canggih. Sangat merekomendasikan untuk semua orang!</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="./Index_files/a2fc997c13eebe76b8d6507c4c8a6acedcce1f970313f883b9c4e6e7cbee0ec8.jpg" alt="Reviewer" class="reviewer-avatar">
+                        <div class="reviewer-info">
+                            <h4 class="reviewer-name">Dewi Sartika</h4>
+                            <p class="review-date">3 Mei 2023</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                    </div>
+                    <p class="review-text">AZKABET Games memberikan pengalaman bermain yang luar biasa. Grafisnya memukau dan gameplay-nya adiktif. Saya menghabiskan berjam-jam bermain tanpa merasa bosan!</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="./Index_files/04861170728a2a21c9a9c7bb32b94f5812a98acbada38fb4e18609d0251b0686.jpg" alt="Reviewer" class="reviewer-avatar">
+                        <div class="reviewer-info">
+                            <h4 class="reviewer-name">Budi Santoso</h4>
+                            <p class="review-date">27 April 2023</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="review-text">Sistem pembayaran QRIS dari AZKABET sangat memudahkan transaksi saya. Cepat, aman, dan tanpa masalah. Antarmuka yang intuitif membuat penggunaan menjadi sangat mudah bahkan untuk pemula.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Promo Section -->
+    <section class="promo">
+        <div class="promo-container">
+            <div class="promo-banner">
+                <div class="promo-content">
+                    <h2 class="promo-title">Promo Spesial</h2>
+                    <p class="promo-description">Dapatkan diskon 50% untuk semua produk premium AZKABET dan nikmati fitur eksklusif selama 3 bulan pertama. Penawaran terbatas, jangan sampai terlewatkan!</p>
+                    <button class="promo-button">Klaim Sekarang</button>
+                </div>
+                <div class="promo-image">
+                    <img src="./Index_files/073e6ecc78d30bd5bb4b7efbab3a60286bfa45b26d6f5bbbed0d961d1470fbe1.jpg" alt="Promo Special">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <div class="footer-logo-text">AZKABET</div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Navigasi</h3>
+                <ul>
+                    <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#"><i class="ri-home-4-line"></i> Beranda</a></li>
+                    <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#"><i class="ri-shopping-bag-3-line"></i> Produk</a></li>
+                    <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#"><i class="ri-information-line"></i> Tentang Kami</a></li>
+                    <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#"><i class="ri-customer-service-2-line"></i> Kontak</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Produk</h3>
+                <ul>
+                    <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#"><i class="ri-smartphone-line"></i> AZKABET Mobile</a></li>
+                    <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#"><i class="ri-vip-crown-line"></i> AZKABET Premium</a></li>
+                    <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#"><i class="ri-qr-code-line"></i> AZKABET QRIS</a></li>
+                    <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#"><i class="ri-gamepad-line"></i> AZKABET Games</a></li>
+                    <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#"><i class="ri-virtual-reality-line"></i> AZKABET VR</a></li>
+                    <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#"><i class="ri-robot-line"></i> AZKABET AI</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Bantuan</h3>
+                <ul>
+                    <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#"><i class="ri-question-line"></i> FAQ</a></li>
+                    <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#"><i class="ri-customer-service-line"></i> Dukungan</a></li>
+                    <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#"><i class="ri-file-text-line"></i> Syarat &amp; Ketentuan</a></li>
+                    <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#"><i class="ri-shield-check-line"></i> Kebijakan Privasi</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Hubungi Kami</h3>
+                <ul>
+                    <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#"><i class="ri-mail-line"></i> info@azkabet.id</a></li>
+                    <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#"><i class="ri-phone-line"></i> +62 812 3456 7890</a></li>
+                    <li><a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#"><i class="ri-map-pin-line"></i> Jakarta, Indonesia</a></li>
+                </ul>
+                
+                <div class="social-icons">
+                    <a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#"><i class="ri-facebook-fill"></i></a>
+                    <a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#"><i class="ri-twitter-fill"></i></a>
+                    <a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#"><i class="ri-instagram-line"></i></a>
+                    <a href="https://assets-persist.lovart.ai/agent_images/cb8d9e9b-736b-47b4-ad8b-8a3a54c56e63.html#"><i class="ri-youtube-fill"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2023 AZKABET. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Floating CTA Button (Mobile Only) -->
+    <button class="floating-cta">Daftar Sekarang</button>
+
+
+</body></html>
